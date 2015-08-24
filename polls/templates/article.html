@@ -1,0 +1,45 @@
+{% extends "mybase.html" %}
+
+{% block css %}
+    <style>
+    #cke_editor {
+        width: 900px;
+{#        height: 450px;#}
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .title {
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #cke_1_contents {
+        height: 100%;
+    }
+    .submit {
+        width: 900px;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    </style>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+{% block content %}
+<div class="row">
+    <form class="form" method="post" action="add_article">
+        <div class="input-group title">
+            <span class="input-group-addon">题目：</span>
+            <input class="form-control" name="title">
+        </div>
+        <br>
+        <textarea class="ckeditor" name="editor" style="width:500px;height:1000px;color: #000000;"></textarea>
+        <script src="//cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
+        <div class="submit"><button class="btn btn-success" type="submit">确认</button><button class="btn btn-warning" type="button">取消</button></div>
+    </form>
+</div>
+
+
+{% endblock %}
+

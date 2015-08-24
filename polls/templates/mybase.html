@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BILL</title>
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap-theme.css">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/hint.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}SLICK-1.5.6/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}SLICK-1.5.6/slick/slick-theme.css"/>
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+    .nav-tabs > li > a {
+        margin-right: 2px;
+        line-height: 1.42857143;
+        border: 1px solid transparent;
+        border-radius: 0px 0px 0 0;
+    }
+{#    .nav-tabs {#}
+{#        margin-bottom: 10px;#}
+{#    }#}
+    .nav-tabs li:first-child {
+        margin-left: 200px;
+    }
+    .row {
+        margin-bottom: 10px;
+    }
+    </style>
+    {% block css %}
+    {% endblock %}
+{% block js %}
+{% endblock %}
+
+</head>
+<body class="bg-primary">
+    <div class="container container-fluid">
+        <header>
+            <div class="row">
+                <!-- 导航条 -->
+                <div role="navigation" class="row" style="height: 42px;">
+                    <ul class="nav nav-tabs navbar-fixed-top navbar-inverse">
+                        <li role="presentation" class="active"><a href="{% url "home" %}">HomePage</a></li>
+                        <li role="presentation"><a href="{% url "picture" %}">Picture</a></li>
+                        <li role="presentation"><a href="{% url "article_list" %}">Aticle</a></li>
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Other
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="content" style="min-height: 450px;">
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+
+
+        <footer>
+            <hr style=" height:4px;border:none;border-top:2px dotted #4a4a4a;"/>
+        </footer>
+    <div>
+        <p class="text-center">个人网站</p>
+    </div>
+    </div>
+
+
+<script src="{{ STATIC_URL }}js/jquery-1.11.3.js"></script>
+<script src="{{ STATIC_URL }}jquery-ui-1.11.4.custom/jquery-ui.min.css"></script>
+<script src="{{ STATIC_URL }}jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script>
+<script src="{{ STATIC_URL }}slick-1.5.6/slick/slick.min.js"></script>
+<script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+{#<script type="text/javascript" src="{{ STATIC_URL }}js/ckeditor.js"></script>#}
+
+</body>
+</html>

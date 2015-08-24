@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css">
+    <script type="application/javascript" rel="script" resource="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        background-image:url('{{ STATIC_URL }}image/bg1.jpg');
+        background-size:cover;
+
+    }
+{#        .container{#}
+{#            width: 80%;#}
+{#            margin-left: auto;#}
+{#            margin-right: auto;#}
+{#        }#}
+
+        .form1{
+            width: 50%;
+{#            height: 220px;;#}
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+        .form-group{
+            margin-top: 20px;
+        }
+        fieldset{
+{#            height: auto;#}
+            position: relative;
+            bottom: 10px;
+            top: 10px;
+        }
+    </style>
+    {% load staticfiles %}
+</head>
+<body>
+<div class="container">
+    <h1 style="color: #f5f5f5; width:100%;margin-left: auto; margin-right: auto; align-content: center">个人主站后台管理</h1>
+    <form action="{% url "signin" %}" class="form1" style="background-color: #f5f5f5; width: 50%; height: 320px; border-radius: 10px;">
+        <fieldset style="align-items: center">
+{#            <div style="align-content: center" class="bg-info"><span style="width:100%;margin-left:auto; margin-right:auto;"><h4>用户登录</h4></span></div>#}
+            <legend class="text-center" style="margin-top: 0px;">用户登录</legend>
+            <div class="form-group">
+                <label>用户名：<input type="email" id="username" class="form-control" placeholder="请输入用户名"></label>
+            </div>
+            <div  class="form-group">
+                <label style="white-space: normal">密码：<input type="password" id="pwd" class="form-control" placeholder="密码"></label>
+            </div>
+            <div class="checkbox" style="margin-top: 20px;">
+                <label><input type="checkbox">记住密码</label>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="" style="margin-top: 10px;">登录</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
